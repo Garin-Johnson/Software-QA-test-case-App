@@ -1,1 +1,180 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Garin's Software QA Test Case App</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <style>
+  #section-1{
+	animation-delay:1s;
+	/*animation-duration:5s;*/
+	/*animation-iteration-count:3;*/
+  }
+  
+  #section-2{
+	animation-delay:2s;
+  }
+  </style>
+  </head>
+  <body>
+  <div class="container">
+  <header class="animated rotateIn text-center  bg-primary text-white p-5">
+	<h1 class="display-4">Garin's Software QA Test Case App</h1>
+  </header>
+  <section id="section-1" class="animated slideInLeft bg-faded p-5 my-3">
+  <h1>Test Case Description and Dependencies</h1>
+  <p>
+	<table border="3">
+		<table>
+  <tr>
+    <th>Test Case ID&nbsp;</th>
+    <th>Test Priority(Low/Med/High)&nbsp;</th>
+    <th>Module Name&nbsp;</th>
+	<th>Test Title&nbsp;</th>
+	<th>Description&nbsp;</th>
+	<th>Notes&nbsp;<th>
+  </tr>
+  <tr contenteditable='true'>
+    <td></td>
+    <td></td>
+    <td></td>
+	<td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <!--
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>-->
+	</table>
+  </p>
+  </section>
+  <section id="section-2" class="animated slideInRight bg-faded p-5 my-3" > 
+  
+  <h1 id="anim-head">Test Case</h1>
+  <p id="anim-body">
+  <table border="3">
+		<table>
+		<!--Test Steps-->
+  <tr>
+    <th>Test Steps&nbsp;</th>
+    <th>Test Data&nbsp;</th>
+    <th>Expected Results&nbsp;</th>
+	<th>Actual Results&nbsp;</th>
+	<th>Status(Pass/Fail)&nbsp;</th>
+	<th>Notes&nbsp;<th>
+  </tr>
+  <!--Test Data-->
+  <tr contenteditable='true'>
+    <td>Navagate to Gmail login page&nbsp;</td>
+	<td>Enter Data here &nbsp;</td>
+    <td>User Should be able to log in &nbsp;</td>
+    <td>I was able to navigate to dashboard with a successful login &nbsp</td>
+	<td>Pass &nbsp;</td>
+    <td></td>
+  </tr>
+  <!---->
+  <tr contenteditable="true">
+    <td>Provide Valid user name</td>
+    <td>Example@gmail.com &nbsp;</td>
+    <td>Enter Data here &nbsp;</td>
+  </tr>
+  <!---->
+  <tr contenteditable="true">
+    <td>Provide password</td>
+    <td>RootKansasLegislatureDev$ &nbsp;</td>
+    <td>Enter Data here &nbsp;</td>
+  </tr>
+  <!---->
+  <tr contenteditable="true">
+    <td>Click Next button &nbsp;</td>
+    <td>Enter Data here &nbsp;</td>
+    <td>Enter Data here &nbsp</td>
+  </tr>
+  <!--Notes-->
+  <tr contenteditable="true">
+    <td></td>
+    <td>Enter Data here &nbsp;</td>
+    <td>Enter Data here &nbsp;</td>
+  </tr>
+  <tr contenteditable="true">
+    <td></td>
+    <td>Enter Data here &nbsp;</td>
+    <td>Enter Data here &nbsp;</td>
+  </tr>
+	</table>
+  
+  
+  <button id="animateBtn" class="animated hinge btn btn-primary">Click Me!</button>
+  </section>
+  
+  </p>
+  <!--Software QA testing interview Questions and Answers-->
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p>
+  <h1>Software QA Q&A </h1>
+  <ol>
+  <li>What is Agile testing? Requirements, Design, Implemetation, Verification, Maintenance, and test before the application is complete so a pivot can be made easier.</li>
+  <li>What waterfall testing?  Scope is firm and fixed not easy to pivot when necessary. </li>
+  <li>What is Bug release? Handing over software with known bugs. &nbsp; What is Bug leakage? When testers failt to detect a bug before users report it.</li>
+  <li>What is regression testing?  Testing to see if a bug fix impacts other functionality. </li>
+  <li>What is Crud or Black Box testing?  Create, Read, Upadate, and Delete. </li>
+  <li>What is Whitebox testing?  It is transparent code based testing when you have access to the source code(Unit testing, Integration testing, regression testing. ) </li>
+  
+</ol>
+  </p>
+  
+  </div>
+    <script src="index.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+	
+	<script>
+	$(function(){
+	$("#animateBtn").click(function(){
+		animate("anim-head", "bounce");
+		animate("anim-body", "rubberBand");
+		
+		return false;
+	});
+	
+	//Animate
+	function animate(element, animation){
+		$(element).addClass("animated "+animation);
+		var wait = setTimeout(function(){
+		$(element).removeClass("animated "+animation);
+		}, 1000);
+	}
+	})
+	</script>
+	
+  </body>
+</html>
